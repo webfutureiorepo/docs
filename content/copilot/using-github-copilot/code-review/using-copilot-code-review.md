@@ -42,11 +42,6 @@ The current functionality and availability of the two types of review is summari
 
 The **review changes** type of {% data variables.copilot.copilot_code-review_short %} is a premium feature with a per-person monthly quota.
 
-<!-- expires 2025-06-11 -->
-> [!NOTE]
-> Billing for premium requests is coming soon. Until then, you can continue to use {% data variables.copilot.copilot_code-review_short %} without being billed for additional premium requests. For the most up-to-date start date, see [AUTOTITLE](/copilot/managing-copilot/monitoring-usage-and-entitlements/about-premium-requests).
-<!-- expires 2025-06-11 -->
-
 When you assign {% data variables.product.prodname_copilot_short %} as a reviewer for a pull request, one premium request is deducted from your monthly quota each time {% data variables.product.prodname_copilot_short %} posts comments to the pull request. See [AUTOTITLE](/copilot/managing-copilot/monitoring-usage-and-entitlements/about-premium-requests).
 
 If a repository is configured to automatically request a code review from {% data variables.product.prodname_copilot_short %} for all new pull requests, the premium request usage is applied to the quota of the pull request author. If a pull request is created by {% data variables.product.prodname_actions %} or by a bot, the usage will apply to the user who triggered the workflow (if identifiable), or to a designated billing owner.
@@ -71,11 +66,6 @@ This version of the article relates to {% data variables.copilot.copilot_code-re
 ### Code review monthly quota
 
 The **review changes** type of {% data variables.copilot.copilot_code-review_short %} is a premium feature with a per-person monthly quota.
-
-<!-- expires 2025-06-11 -->
-> [!NOTE]
-> Billing for premium requests is coming soon. Until then, you can continue to use {% data variables.copilot.copilot_code-review_short %} without being billed for additional premium requests. For the most up-to-date start date, see [AUTOTITLE](/copilot/managing-copilot/monitoring-usage-and-entitlements/about-premium-requests).
-<!-- expires 2025-06-11 -->
 
 When you assign {% data variables.product.prodname_copilot_short %} as a reviewer for a pull request, one premium request is deducted from your monthly quota each time {% data variables.product.prodname_copilot_short %} posts comments to the pull request. See [AUTOTITLE](/copilot/managing-copilot/monitoring-usage-and-entitlements/about-premium-requests).
 
@@ -125,8 +115,6 @@ These instructions explain how to use {% data variables.copilot.copilot_code-rev
 Where possible, {% data variables.product.prodname_copilot_short %}'s feedback includes suggested changes which you can apply with a couple of clicks.
 
 If you're happy with the changes, you can accept a single suggestion from {% data variables.product.prodname_copilot_short %} and commit it, or accept a group of suggestions together in a single commit. For more information, see [AUTOTITLE](/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request).
-
-If you want to validate {% data variables.product.prodname_copilot_short %}'s suggested changes (for example by running automated tests or your linter), or if you want to make modifications before committing the suggested changes, click the **Open in Workspace** button. For more information, see [AUTOTITLE](/copilot/using-github-copilot/using-github-copilot-for-pull-requests/using-copilot-to-help-you-work-on-a-pull-request).
 
 ## Providing feedback on {% data variables.product.prodname_copilot_short %}'s reviews
 
