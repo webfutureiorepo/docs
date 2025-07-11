@@ -1,3 +1,23 @@
+// Configuration for which rules should be included in automated weekly reports
+export const reportingConfig = {
+  // Always include all rules with these severities
+  includeSeverities: ['error'],
+
+  // Specific rules to include regardless of severity
+  // Add rule names (short or long form) that should always be reported
+  includeRules: [
+    'GHD038', // expired-content - Content that has passed its expiration date
+    'expired-content',
+  ],
+
+  // Specific rules to exclude from reports (overrides severity-based inclusion)
+  // Add rule names here if you want to suppress them from reports
+  excludeRules: [
+    // Example: 'GHD030' // Uncomment to exclude code-fence-line-length warnings
+    // Example: 'british-english-quotes' // Uncomment to exclude punctuation warnings
+  ],
+}
+
 const githubDocsConfig = {
   'link-punctuation': {
     // GHD001
@@ -101,6 +121,12 @@ const githubDocsConfig = {
     'partial-markdown-files': true,
     'yml-files': true,
   },
+  'code-fence-line-length': {
+    // GHD030
+    severity: 'warning',
+    'partial-markdown-files': true,
+    'yml-files': true,
+  },
   'image-alt-text-exclude-words': {
     // GHD031
     severity: 'error',
@@ -137,7 +163,7 @@ const githubDocsConfig = {
   },
   'expired-content': {
     // GHD038
-    severity: 'error',
+    severity: 'warning',
     'partial-markdown-files': true,
   },
   'expiring-soon': {
@@ -170,6 +196,36 @@ const githubDocsConfig = {
   },
   'octicon-aria-labels': {
     // GHD044
+    severity: 'warning',
+    'partial-markdown-files': true,
+    'yml-files': true,
+  },
+  'code-annotation-comment-spacing': {
+    // GHD045
+    severity: 'warning',
+    'partial-markdown-files': true,
+    'yml-files': true,
+  },
+  'table-column-integrity': {
+    // GHD047
+    severity: 'warning',
+    'partial-markdown-files': true,
+    'yml-files': true,
+  },
+  'british-english-quotes': {
+    // GHD048
+    severity: 'warning',
+    'partial-markdown-files': true,
+    'yml-files': true,
+  },
+  'note-warning-formatting': {
+    // GHD049
+    severity: 'warning',
+    'partial-markdown-files': true,
+    'yml-files': true,
+  },
+  'multiple-emphasis-patterns': {
+    // GHD050
     severity: 'warning',
     'partial-markdown-files': true,
     'yml-files': true,

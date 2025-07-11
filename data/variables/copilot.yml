@@ -45,6 +45,7 @@ copilot_code-review_short: 'Copilot code review'
 
 ## Copilot coding agent (previously Padawan) -> {% data variables.copilot.copilot_coding_agent %}
 copilot_coding_agent: 'Copilot coding agent'
+copilot_coding_agent_short: 'Coding agent'
 
 ## Short for "Copilot Extensions agent" -> {% data variables.copilot.copilot_agent_short %}
 ## Note: this is NOT a short form for the Copilot coding agent (previously Padawan):
@@ -108,9 +109,7 @@ copilot_gemini_25_pro: 'Gemini 2.5 Pro'
 # OpenAI GPT series:
 copilot_gpt_4o: 'GPT-4o'
 copilot_gpt_41: 'GPT-4.1'
-copilot_gpt_45: 'GPT-4.5'
 # OpenAI 'o' series:
-copilot_o1: 'o1'
 copilot_o3: 'o3'
 copilot_o3_mini: 'o3-mini'
 copilot_o4_mini: 'o4-mini'

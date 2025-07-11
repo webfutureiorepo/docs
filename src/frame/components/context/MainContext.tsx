@@ -54,6 +54,7 @@ export type ProductTreeNode = {
   title: string
   href: string
   childPages: Array<ProductTreeNode>
+  layout?: string
 }
 
 type UIString = Record<string, string>
@@ -90,7 +91,7 @@ export type MainContextT = {
   breadcrumbs: {
     product: BreadcrumbT
     category?: BreadcrumbT
-    maptopic?: BreadcrumbT
+    subcategory?: BreadcrumbT
     article?: BreadcrumbT
   }
   communityRedirect: {

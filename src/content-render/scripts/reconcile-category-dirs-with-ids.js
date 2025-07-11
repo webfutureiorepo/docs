@@ -14,22 +14,22 @@ import chalk from 'chalk'
 import GithubSlugger from 'github-slugger'
 import { decode } from 'html-entities'
 
-import frontmatter from '#src/frame/lib/read-frontmatter.js'
-import { renderContent } from '#src/content-render/index.js'
-import { allVersions } from '#src/versions/lib/all-versions.js'
-import { ROOT } from '#src/frame/lib/constants.js'
+import frontmatter from '@/frame/lib/read-frontmatter'
+import { renderContent } from '@/content-render/index'
+import { allVersions } from '@/versions/lib/all-versions'
+import { ROOT } from '@/frame/lib/constants'
 
 const slugger = new GithubSlugger()
 
 const contentDir = path.join(ROOT, 'content')
 
-const INCLUDE_MAP_TOPICS = Boolean(JSON.parse(process.env.INCLUDE_MAP_TOPICS || 'false'))
+const INCLUDE_SUBCATEGORIES = Boolean(JSON.parse(process.env.INCLUDE_SUBCATEGORIES || 'false'))
 
 main()
 
 async function main() {
   const englishCategoryIndices = getEnglishCategoryIndices().filter((name) => {
-    return INCLUDE_MAP_TOPICS || name.split(path.sep).length < 5
+    return INCLUDE_SUBCATEGORIES || name.split(path.sep).length < 5
   })
 
   const shouldRename = []

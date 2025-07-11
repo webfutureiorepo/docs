@@ -9,7 +9,7 @@ import { turnOffExperimentsInPage } from '../helpers/turn-off-experiments'
 // The `src/frame/start-server.ts` script uses dotenv too, but since Playwright
 // tests only interface with the server via HTTP, we too need to find
 // this out.
-dotenv.config()
+dotenv.config({ quiet: true })
 
 const SEARCH_TESTS = !!process.env.ELASTICSEARCH_URL
 
@@ -302,18 +302,18 @@ test.describe('tool picker', () => {
   })
 })
 
-test('navigate with side bar into article inside a map-topic inside a category', async ({
+test('navigate with side bar into article inside a subcategory inside a category', async ({
   page,
 }) => {
   // Our TreeView sidebar only shows "2 levels". If you click and expand
-  // the category, you'll be able to see the map-topic and the article
+  // the category, you'll be able to see the subcategory and the article
   // within.
   await page.goto('/actions')
-  await page.getByTestId('sidebar').getByText('Category').click()
-  await page.getByText('Map & Topic').click()
+  await page.getByTestId('sidebar').getByText('Category', { exact: true }).click()
+  await page.getByTestId('sidebar').getByText('Subcategory').click()
   await page.getByText('<article>').click()
   await expect(page.getByRole('heading', { name: 'Article title' })).toBeVisible()
-  await expect(page).toHaveURL(/actions\/category\/map-topic\/article/)
+  await expect(page).toHaveURL(/actions\/category\/subcategory\/article/)
 })
 
 test.describe('hover cards', () => {
